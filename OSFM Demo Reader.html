@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSFM Demo Reader</title>
+    <script src="https://unpkg.com/pako@2.0.4/dist/pako.min.js"></script>
+    <script src="json-viewer.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <input id="file-container" type="file" onchange="FileUploaded(event)">File Input</input>
+    <br>
+    <input id="chunk-number" type="number" onchange="LoadChunk(event)" value="0" />
+    <br>
+    <input id="no-seed-check" type="checkbox" />No Seeds</input>
+    <br>
+    <input id="no-keys-check" type="checkbox" />No Keys</input>
+    <br>
+    <input id="no-coords-check" type="checkbox" />No Window Coords</input>
+    <br>
+    Total key events:
+    <span id="total-key-count">-</span>
+
+    <div id="json-target"></div>
+</body>
+
+</html>
